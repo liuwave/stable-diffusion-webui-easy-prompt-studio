@@ -1,0 +1,49 @@
+.easy_prompt_studio_container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+.easy_prompt_studio_button {
+  flex: 1;
+}
+
+.easy-prompt-tabs{
+    width: 100%;
+}
+
+       .easy-prompt-tabs .button-nav-item {
+            margin-bottom: -1px;
+            border: 1px solid transparent;
+            border-color: transparent;
+            border-bottom: none;
+            border-top-right-radius: var(--container-radius);
+            border-top-left-radius: var(--container-radius);
+            padding: var(--size-1) var(--size-4);
+            color: var(--body-text-color-subdued);
+            font-weight: var(--section-header-text-weight);
+            font-size: var(--section-header-text-size);
+        }
+       .easy-prompt-tabs .button-nav-item.selected {
+            border-color: var(--border-color-primary);
+            background: var(--background-fill-primary);
+            color: var(--body-text-color);
+        }
+
+      .easy-prompt-tabs  .tabitem {
+            display: none;
+            position: relative;
+            border: 1px solid var(--border-color-primary);
+            border-top: none;
+            border-bottom-right-radius: var(--container-radius);
+            border-bottom-left-radius: var(--container-radius);
+            padding: var(--block-padding);
+            background: var(--body-background-fill);
+            justify-content: start;
+            flex-flow: wrap;
+        }
+
+      .easy-prompt-tabs  .tabitem.show {
+            display: flex;
+        }
