@@ -54,10 +54,11 @@ def find_tag(tags, location):
 def replace_template(tags, prompt):
     count = 0
     while count < 100:
-        if not ('@' in prompt):
+        if not ('%' in prompt):
             break
 
-        for match in re.finditer(r'(@((?P<num>\d+(-\d+)?)\$\$)?(?P<ref>[^>]+?)@)', prompt):
+
+        for match in re.finditer(r'(%((?P<num>\d+(-\d+)?)\$\$)?(?P<ref>[^>]+?)%)', prompt):
             template = match.group()
             try:
                 try:
@@ -106,38 +107,38 @@ class Script(scripts.Script):
         return [reload_button]
 
     def replace_template_tags(self, p):
-        if not shared.opts.eps_use_old_template_feature:
-            if '@' in p.prompt:
+        if not shared.opts.eps_is_using_old_template_feature:
+            if '%' in p.prompt:
                 for i in range(len(p.all_prompts)):
-                    self.save_prompt_to_pnginfo(p)
+                    self.save_prompt_to_png_info(p)
 
                     prompt = "".join(replace_template(self.tags, p.all_prompts[i]))
                     p.all_prompts[i] = prompt
 
-            if '@' in p.negative_prompt:
+            if '%' in p.negative_prompt:
                 for i in range(len(p.all_negative_prompts)):
-                    self.save_prompt_to_pnginfo(p, True)
+                    self.save_prompt_to_png_info(p, True)
 
                     negative_prompt = "".join(replace_template(self.tags, p.all_negative_prompts[i]))
                     p.all_negative_prompts[i] = negative_prompt
         else:
 
-            if '@' in p.prompt:
-                self.save_prompt_to_pnginfo(p)
+            if '%' in p.prompt:
+                self.save_prompt_to_png_info(p)
 
                 p.prompt = replace_template(self.tags, p.prompt)
                 for i in range(len(p.all_prompts)):
                     p.all_prompts[i] = p.prompt
 
-            if '@' in p.negative_prompt:
-                self.save_prompt_to_pnginfo(p, True)
+            if '%' in p.negative_prompt:
+                self.save_prompt_to_png_info(p, True)
 
                 p.negative_prompt = replace_template(self.tags, p.negative_prompt)
                 for i in range(len(p.all_negative_prompts)):
                     p.all_negative_prompts[i] = p.negative_prompt
 
-    def save_prompt_to_pnginfo(self, p, is_negative=False):
-        if not shared.opts.eps_enable_save_raw_prompt_to_pnginfo:
+    def save_prompt_to_png_info(self, p, is_negative=False):
+        if not shared.opts.eps_enable_save_raw_prompt_to_png_info:
             return
 
         if not is_negative:

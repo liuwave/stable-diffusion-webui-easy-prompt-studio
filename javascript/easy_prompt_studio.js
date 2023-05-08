@@ -1,4 +1,4 @@
-class EPSElementBuilder {
+class EPSElementCreator {
   // Templates
   static baseButton(text, { size = 'sm', color = 'primary' }) {
     const button = gradioApp().getElementById('txt2img_generate').cloneNode()
@@ -36,7 +36,7 @@ class EPSElementBuilder {
 
   // Elements
   static openButton({ onClick }) {
-    const button = EPSElementBuilder.baseButton('🔯选择标签', { size: 'sm', color: 'secondary' })
+    const button = EPSElementCreator.baseButton('🔯选择标签11', { size: 'sm', color: 'secondary' })
     button.classList.add('easy_prompt_studio_button')
     button.addEventListener('click', onClick)
 
@@ -53,7 +53,7 @@ class EPSElementBuilder {
   }
 
   static tagButton({ title, onClick, onRightClick, color = 'primary' }) {
-    const button = EPSElementBuilder.baseButton(title, { color })
+    const button = EPSElementCreator.baseButton(title, { color })
     button.style.height = '2rem'
     button.style.flexGrow = '0'
     button.style.margin = '2px'
@@ -115,10 +115,10 @@ class EPSElementBuilder {
 
 class EasyPromptStudio {
   PATH_FILE = 'tmp/easyPromptStudio.txt'
-  AREA_ID = 'easy-prompt-selector'
-  SELECT_ID = 'easy-prompt-selector-select'
-  CONTENT_ID = 'easy-prompt-selector-content'
-  TO_NEGATIVE_PROMPT_ID = 'easy-prompt-selector-to-negative-prompt'
+  AREA_ID = 'easy-prompt-studio'
+  SELECT_ID = 'easy-prompt-studio-select'
+  CONTENT_ID = 'easy-prompt-studio-content'
+  TO_NEGATIVE_PROMPT_ID = 'easy-prompt-studio-to-negative-prompt'
 
   constructor(yaml, gradioApp) {
     this.yaml = yaml
@@ -180,7 +180,7 @@ class EasyPromptStudio {
     row.appendChild(dropDown)
 
     const settings = document.createElement('div')
-    const checkbox = EPSElementBuilder.checkbox('输入反向提示', {
+    const checkbox = EPSElementCreator.checkbox('输入反向提示2', {
       onChange: (checked) => { this.toNegative = checked }
     })
     settings.style.flex = '1'
@@ -188,7 +188,7 @@ class EasyPromptStudio {
 
     row.appendChild(settings)
 
-    const container = EPSElementBuilder.areaContainer(this.AREA_ID)
+    const container = EPSElementCreator.areaContainer(this.AREA_ID)
 
     container.appendChild(row)
     container.appendChild(this.renderContent())
@@ -197,13 +197,13 @@ class EasyPromptStudio {
   }
 
   renderDropdown() {
-    const dropDown = EPSElementBuilder.dropDown(
+    const dropDown = EPSElementCreator.dropDown(
       this.SELECT_ID,
       Object.keys(this.tags), {
         onChange: (selected) => {
           const content = gradioApp().getElementById(this.CONTENT_ID)
           Array.from(content.childNodes).forEach((node) => {
-            const visible = node.id === `easy-prompt-selector-container-${selected}`
+            const visible = node.id === `easy-prompt-studio-container-${selected}`
             this.changeVisibility(node, visible)
           })
         }
@@ -222,12 +222,12 @@ class EasyPromptStudio {
     Object.keys(this.tags).forEach((key) => {
       const values = this.tags[key]
 
-      const fields = EPSElementBuilder.tagFields()
-      fields.id = `easy-prompt-selector-container-${key}`
+      const fields = EPSElementCreator.tagFields()
+      fields.id = `easy-prompt-studio-container-${key}`
       fields.style.display = 'none'
       fields.style.flexDirection = 'row'
       fields.style.marginTop = '10px'
-      fields.classList.add('easy-prompt-selector-container-content')
+      fields.classList.add('easy-prompt-studio-container-content')
 
       // this.renderTagButtons(values, key).forEach((group) => {
       //   fields.appendChild(group)
@@ -240,15 +240,11 @@ class EasyPromptStudio {
   }
 
   renderTab(tags,prefix){
-    console.log(tags)
     const tabs=document.createElement('div')
-    tabs.classList.add('tabs')
-    tabs.classList.add('easy-prompt-tabs')
-    tabs.classList.add('gradio-tabs')
+    tabs.classList.add("tabs", "easy-prompt-tabs", "gradio-tabs");
 
     const tabNav=document.createElement('div');
-    tabNav.classList.add('tab-nav')
-    tabNav.classList.add('scroll-hide')
+    tabNav.classList.add("tab-nav", "scroll-hide");
 
     const contents =[]
 
@@ -259,10 +255,9 @@ class EasyPromptStudio {
       button.classList.add('button-nav-item')
       button.setAttribute('data-target',index)
       button.addEventListener('click',(e)=>{
-        console.log(e)
-        const navs=tabs.querySelectorAll('.button-nav-item')
-        for (let i = 0; i < navs.length; i++) {
-          navs[i].classList.remove('selected')
+        const navList=tabs.querySelectorAll('.button-nav-item')
+        for (let i = 0; i < navList.length; i++) {
+          navList[i].classList.remove('selected')
         }
         e.target.classList.add('selected')
 
@@ -276,9 +271,7 @@ class EasyPromptStudio {
       })
 
       const content=document.createElement('div')
-      content.classList.add('tabitem')
-      content.classList.add('content-item')
-      content.classList.add('gradio-tabitem')
+      content.classList.add("tabitem", "content-item", "gradio-tabitem");
 
       this.renderTagButtons(tags[key],`${prefix}:${key}`).forEach(group=>{
       if(index===0){
@@ -309,13 +302,13 @@ class EasyPromptStudio {
 
         if (typeof values === 'string') { return this.renderTagButton(key, values, 'secondary') }
 
-        const fields = EPSElementBuilder.tagFields()
+        const fields = EPSElementCreator.tagFields()
 
         fields.style.flexDirection = 'column'
 
-        fields.append(this.renderTagButton(key, `@${randomKey}@`))
+        fields.append(this.renderTagButton(key, `%${randomKey}%`))
 
-        const buttons = EPSElementBuilder.tagFields()
+        const buttons = EPSElementCreator.tagFields()
         buttons.id = 'buttons'
         fields.append(buttons)
         this.renderTagButtons(values, randomKey).forEach((button) => {
@@ -328,11 +321,10 @@ class EasyPromptStudio {
   }
 
   renderTagButton(title, value, color = 'primary') {
-    return EPSElementBuilder.tagButton({
+    return EPSElementCreator.tagButton({
       title,
       onClick: (e) => {
         e.preventDefault();
-        console.log(e)
 
         this.addTag(value, this.toNegative || e.metaKey || e.ctrlKey)
       },
@@ -384,7 +376,7 @@ onUiLoaded(async () => {
   yaml = window.jsyaml
   const easyPromptStudio = new EasyPromptStudio(yaml, gradioApp())
 
-  const button = EPSElementBuilder.openButton({
+  const button = EPSElementCreator.openButton({
     onClick: () => {
       const tagArea = gradioApp().querySelector(`#${easyPromptStudio.AREA_ID}`)
       easyPromptStudio.changeVisibility(tagArea, easyPromptStudio.visible = !easyPromptStudio.visible)
