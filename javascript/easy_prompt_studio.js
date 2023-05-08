@@ -232,7 +232,7 @@ class EasyPromptStudio {
       // this.renderTagButtons(values, key).forEach((group) => {
       //   fields.appendChild(group)
       // })
-      fields.appendChild(this.renderTab(values),key)
+      fields.appendChild(this.renderTab(values,key))
       content.appendChild(fields)
     })
 
@@ -280,7 +280,7 @@ class EasyPromptStudio {
       content.classList.add('content-item')
       content.classList.add('gradio-tabitem')
 
-      this.renderTagButtons(tags[key],key).forEach(group=>{
+      this.renderTagButtons(tags[key],`${prefix}:${key}`).forEach(group=>{
       if(index===0){
         button.classList.add('selected')
         content.classList.add('show')
