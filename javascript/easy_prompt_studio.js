@@ -196,7 +196,7 @@ class EasyPromptStudio {
     row.appendChild(dropDown);
 
     const settings = document.createElement("div");
-    const checkbox = EPSElementCreator.checkbox("输入反向提示2", {
+    const checkbox = EPSElementCreator.checkbox("输入反向提示", {
       onChange: (checked) => {
         this.toNegative = checked;
       },
