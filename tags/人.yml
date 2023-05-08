@@ -1,66 +1,230 @@
-对象: 
-  - girl
-  - boy
-  - 1 other
-  - multiple girls
+通用:
+  对象:
+    - girl
+    - boy
+    - 1 other
+    - multiple girls
 
-年龄: 
-  teen:  teen
-  罗汀:  early teen
-  成人:  adult
-  老人:  elder
-  儿童:  child
-  幼儿园儿童:  kindergartener
-  幼儿:  toddler
-  萝莉:  萝莉
-  正太:  shota
+  年龄:
+    teen:  teen
+    罗汀:  early teen
+    成人:  adult
+    老人:  elder
+    儿童:  child
+    幼儿园儿童:  kindergartener
+    幼儿:  toddler
+    萝莉:  萝莉
+    正太:  shota
 
-肤色: 
-  白: white skin
-  皮肤白: pale skin
-  褐色: dark skin
-  明亮: shiny skin
-  有色: colored skin
+  肤色:
+    白: white skin
+    皮肤白: pale skin
+    褐色: dark skin
+    明亮: shiny skin
+    有色: colored skin
 
-皮肤装饰: 
-  晒黑: tan
-  日废墟: tanlines
-  纹身: tattoo
-  油: oil
+  皮肤装饰:
+    晒黑: tan
+    日废墟: tanlines
+    纹身: tattoo
+    油: oil
 
-体形: 
-  运动员: athlete
-  模型: model
-  slender: slender
-  魅力: glamor
-  鞭子: plump
-  粗: fat
-  大块头: tall
-  小个子: petite
-  小兔: chibi
-  怀孕: pregnant
-  肌肉: muscular
-  细腰: narrow waist
-  大屁股: wide hips
+  体形:
+    运动员: athlete
+    模型: model
+    slender: slender
+    魅力: glamor
+    鞭子: plump
+    粗: fat
+    大块头: tall
+    小个子: petite
+    小兔: chibi
+    怀孕: pregnant
+    肌肉: muscular
+    细腰: narrow waist
+    大屁股: wide hips
 
-胸部: 
-  菜板: flat chest
-  贫乳: small breasts
-  普通: medium breasts
-  巨乳: large breasts
-  爆乳: huge breasts
-  下垂乳: hanging breasts
+  胸部:
+    菜板: flat chest
+    贫乳: small breasts
+    普通: medium breasts
+    巨乳: large breasts
+    爆乳: huge breasts
+    下垂乳: hanging breasts
 
-身体各部分: 
-  腋: armpits
-  锁骨: collarbone
-  肚脐: navel
-  屁股: ass
-  大腿: thighs
+  身体各部分:
+    腋: armpits
+    锁骨: collarbone
+    肚脐: navel
+    屁股: ass
+    大腿: thighs
 
-翼: 
-  翼: wings
-  蝙蝠的翅膀: bat wings
-  蝴蝶的翅膀: butterfly wings
-  恶魔之翼: demon wings
-  龙翼: dragon wings
+  翼:
+    翼: wings
+    蝙蝠的翅膀: bat wings
+    蝴蝶的翅膀: butterfly wings
+    恶魔之翼: demon wings
+    龙翼: dragon wings
+
+头发:
+  发色:
+    单色:
+      黑发: black hair
+      金发: blonde hair
+      棕色头发: brown hair
+      红发: red hair
+      粉发: pink hair
+      蓝发: blue hair
+      水蓝色头发: aqua hair
+      绿发: green hair
+      紫发: purple hair
+      橙色头发: orange hair
+      银发: silver hair
+      灰发: gray hair
+      白发: white hair
+    多种颜色:
+      多色: multicolored hair
+      网格: streaked hair
+      渐变: gradient hair
+      内搭色: colored inner hair
+      分离色: split-color hair
+
+  发型:
+    长度:
+      百里短: very short hair
+      短发: short hair
+      中长发: medium hair
+      长发: long hair
+      超长发: very long hair
+      超超长发: absurdly long hair
+    种类:
+      臭毛: messy hair
+      直毛: straight hair
+      波浪发型: wavy hair
+      外羽: flipped hair
+      不对称: asymmetrical hair
+    马尾:
+      马尾: ponytail
+      高马尾: high ponytail
+      低马尾: low ponytail
+      前马尾: front ponytail
+      侧马尾: side ponytail
+      分开马尾: split ponytail
+      叠马尾: folded ponytail
+      短马尾: short ponytail
+    双马尾:
+      双马尾: twintails
+      低双马尾: low twintails
+      短双马尾: short twintails
+      三尾: tri tails
+      四轴尾: quad tails
+    麻花辫: braid
+    半特写: half updo
+    one side up: one side up
+    两个侧面: two side up
+    multi-tied hair: multi-tied hair
+    头顶结: topknot
+    卷发: curly hair
+    纵摇: drill hair
+    双纵卷: twin drills
+    林格莱特: ringlets
+    弓型头发: bow-shaped hair
+    丸子头: hair bun
+    圆头发: hair rings
+    脏辫: dreadlocks
+
+  刘海:
+    帕茨: blunt bangs
+    不对称: asymmetrical bangs
+    双眼隐藏: hair over eyes
+    独眼隐: hair over one eye
+    中心分类: parted bangs
+    松分(松): swept bangs
+    眼睛之间: hair between eyes
+    英特尔: hair intakes
+    触角: sidelocks
+
+  其他:
+    侧发: hair flaps
+    傻毛: ahoge
+    天线: antenna hair
+
+面部:
+  眼睛:
+    颜色:
+      黑: black eyes
+      白: white eyes
+      红色: red eyes
+      蓝色: blue eyes
+      绿: green eyes
+      紫色: purple eyes
+      银色: silver eyes
+      金色: golden eyes
+      灰色: gray eyes
+      水蓝色: aqua eyes
+      茶色: brown eyes
+      粉红色: pink eyes
+      橙色: orange eyes
+      异色症: heterochromia
+    状态:
+      半目: half-closed eyes
+      闭上的眼睛: closed eyes
+
+  耳朵:
+    精灵耳: elf ears
+    毛耳: animal ears
+    猫耳: cat ears
+    狐耳朵: fox ears
+
+  表情:
+    笑: smile
+    悲伤的笑: sad smile
+    邪恶的笑: evil smile
+    天使之笑: angelic smile
+    笑(逼): forced smile
+    蛊惑的笑容: seductive smile
+    露出牙齿的笑: grin
+    露出牙齿的笑(邪恶): evil grin
+    得意地笑: smirk
+    愤怒: angry
+    悲伤: sad
+    哭: crying
+    泪: tears
+    恐惧: scared
+    认真: serious
+    焦虑: annoyed
+    堕入黑暗: dark persona
+    窝点脸: doyagao
+    腮红: blush
+    染脸(强): full-face blush
+    无聊: bored
+    罪恶: guilt
+    无感情: expressionless
+    决心: determined
+    吻脸: incoming kiss
+    失望: disappointed
+    轻蔑: disdain
+    嫉妒: envy
+    厌恶: disgust
+    困惑: confused
+    困扰眉: troubled eyebrows
+    愤怒眉毛: v-shaped eyebrows
+    羞耻: embarrassed
+    淘气脸: naughty
+    睡意: sleepy
+
+  口:
+    唇: lip
+    开口: open mouth
+    闭上的嘴: closed mouth
+    牙齿: teeth
+    龅牙: buck teeth
+    上牙: upper teeth
+    圆牙: round teeth
+    锯齿齿: clenched teeth
+    牙: fang
+    舔舌头: licking lips
+    舌头舌: tongue out
+    长舌: long tongue
+    提赫伯罗: tehepero
+    口水: saliva
