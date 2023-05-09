@@ -26,6 +26,11 @@
     抽象背景: abstract background
     蒸汽朋克: steampunk
     赛博朋克: cyberpunk
+  常用反向提示:
+    低质量: lowres,polar lowres,cropped, worst quality, low quality, normal quality,jpeg artifacts,blurry
+    文字logo: text, error, signature, watermark, username
+    身体畸形: bad anatomy,deformed,mutation,poorly drawn face,bad hands,mutated hands,poorly drawn hands,missing fingers,extra fingers,fused fingers,too many fingers,extra digit, fewer digits,bad feet,extra limbs,extra arms,missing arms,extra legs,missing legs,long neck,malformed limbs,bad body,bad proportions,gross proportions
+    复杂服装: ((Intricate clothes, too much lace, too much dacoration on clothes))
 人物:
   人物:
     女性: female
@@ -135,7 +140,7 @@
     圣斗士星矢: saint seiya
     五条悟: gojou satoru
     复仇者联盟: avengers
-    神奇女侠: mazinger 
+    神奇女侠: mazinger
     美国队长: captain america
     蜡笔小新: crayon shin-chan
     灌篮高手: slam dunk
@@ -686,7 +691,7 @@
     透过眼镜看: looking over glasses
     面向观者: look at viewer
     靠近观者: close to viewer
-    动态角度: dynamic angle 
+    动态角度: dynamic angle
     舞台角度: dramatic angle
     凝视: stare
     向上看: looking up
@@ -901,7 +906,7 @@
     原神冲击: genshin impact
     碧蓝航线: azur lane
     舰队收藏: kantai collection
-    边缘行者: rebecca (cyberpunk) 
+    边缘行者: rebecca (cyberpunk)
     电锯人: chainsaw man
     魔法旋涡: Magic Vortex
     柴油朋克: ((dieselpunk))
@@ -997,7 +1002,7 @@
     战姬法: hair fluttering in the wind,((mechanical arm armor)),((mechanical body armor)),riding motor, bodysuit,((ruins of city in war, fire, burning cars, burning buildings)),air force fleet in the sky
     龙机法: mecha clothes, robot girl, sliver bodysuit, dragon wings, ((a dragon  stands behind the girl)), beautiful detailed sliver dragon armor
     星蝶术: ((Beautiful butterflies in detail)),((Beautiful stars in detail)),(((halter dress ))),particle,(Starry sky in beautiful detail),(Hazy fog),(Ruins of beautiful details),(((Standing on the surface of the sea)))
-    学院法: blonde wavy hair, (shiny long hair), ((Gothic Lolita)), blue white skirt, ((short skirt)), black Headdress, bowknot, (((hair ornament))), (hair flower), Lace, cross-laced footwear, ribbon-trimmed sleeves, building architecture, ((gothic architecture)), starry sky, outdoors, church, (castle) 
+    学院法: blonde wavy hair, (shiny long hair), ((Gothic Lolita)), blue white skirt, ((short skirt)), black Headdress, bowknot, (((hair ornament))), (hair flower), Lace, cross-laced footwear, ribbon-trimmed sleeves, building architecture, ((gothic architecture)), starry sky, outdoors, church, (castle)
     星霞海: walking, waves, wind,(((glistening light of waves))),(detailed sunset glow),(floating flow),((coral)),(Luminous),coast,(floating colorful bubbles),beautiful detailed sky,(fluorescence),detailed shadow,(conch),beautiful detailed water, starfish, meteor, rainbow,(seabirds),(glinting stars), (glowworm),(splash),detailed cloud, shell,(fireworks)
     冬雪法: beautiful detailed sky, night, stars, (red plum blossom),((winter)),(((snowflakes))), ((red and white flowers))，(starry sky),(sitting),((colorful)),scenery, lantern,(starfall)
   魔法1.5:
@@ -1009,7 +1014,7 @@
     百溺法: dynamic angle, detailed wet clothes, blank stare, overexplosure, floating, black long straight, red eyes, aqua eyes, gradient eyes, ((blood)), white dress, frills, ((expressionless)), extremely beautiful detailed water, ((lying on the lake)), (bloodred water:1.5), (red background:1.3)
     辉煌阳光法: ((messy hair)),(grassland),(yellow eyes),incredibly absurdres,(gold hair),floating hair,Large number of environments,the medieval ,grace,prospect,water eyes,wind,breeze,god ray,lawn,Mountains and lakes in the distance,The sun shines through the trees,A vast expanse of grassland
     星鬓法: Starry sky adorns hair, sparkling anime eyes,beautiful detailed stars,blighting stars,emerging dark purple across with white hair,multicolored hair,beautiful detailed sky, beautiful detailed water, cinematic lighting, dramatic angle,
-    森罗法: There are many scattered luminous petals,Hidden in the light yellow flowers,Depth of field,Many flying drops of water,Many scattered leaves,branch ,angle ,contour deepening,cinematic angle 
+    森罗法: There are many scattered luminous petals,Hidden in the light yellow flowers,Depth of field,Many flying drops of water,Many scattered leaves,branch ,angle ,contour deepening,cinematic angle
     星天使: sunlight, extremely light, extremely clothes, Holy Light, dynamic angle, Light particle, very long hair, white hair, yellow eyes, glowing eyes, expressionless, ((light smile)), ((((white Tulle skirt)))), white silk, looking at viewer, angel wings, large wings, multiple wings, angel halo, (((starry sky))), dusk sky, Floating light spot, Lots of feathers
     黄金律: blonde hair, yellow eyes, white skin,  mature female, sunrise, golden sky, magnificent architecture, beautiful detailed sky, overexposure, delicate gold metal decorations
     机械姬: mechanical prosthesis,mecha coverage,emerging dark purple across with white hair,fluorescent purple,cool movement,rose red eyes,beatiful detailed cyberpunk city, hd semirealistic anime cg concept art digital painting
